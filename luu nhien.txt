@@ -1,0 +1,369 @@
+// ==UserScript==
+// @name         New Userscript
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        https://tranhdau.net/
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=tranhdau.net
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    // Your code here...
+})();// ==UserScript==
+// @name         New Userscript
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        https://www.tampermonkey.net/index.php?version=4.19.0&ext=dhdg&updated=true
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=tampermonkey.net
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    // Your code here...
+})();// ==UserScript==
+// @name         SASUKE
+// @namespace    http://tampermonkey.net/
+// @version      0.5
+// @description  Fastest Mass Ejector & Split Macro
+// @author       Tom Burris
+// @match        http://tranhdau.net/*
+// @grant        none
+// @run-at       document-end
+// ==/UserScript==
+
+(function(){
+    $("body").dblclick(function(){
+        if($("#doubleclick_d").is(":checked"))
+            keyPress(88);
+    });
+    $("head").append("<style>.emberstyle a, #nick, #ip_newserver{border-radius:5px;} #fb_id:hover{text-decoration:none;}</style>");
+    newIns();
+    var interval_gold, interval_bomb, key = false, key2 = false, att=20, X=0, Y=0, k=0, fg=false;
+
+    function autoSpawn()
+    {
+        setInterval(function(){
+            if($("#overlays").is(':visible') && $("#autorespawnok").is(":checked"))
+                $('.btn-play')[0].click();
+        },1000)
+    }
+
+    function newIns()
+    {
+
+    }
+    $(document).on('keydown',function(e){
+        // Doublesplit -> key2
+        if (e.keyCode == 50)
+        {
+        }
+
+        else if(e.keyCode == 80 && !$("#nick, #ip_newserver, #chat_textbox").is(":focus"))
+        {
+            $('.btn-play-guest')[0].click();
+            $("#overlays").css("display","none");
+        }
+
+
+        else if(e.keyCode == 82)
+
+        {
+        }
+        //=============================== mo =====================================
+        else if(e.keyCode == 90  && e.ctrlKey){
+			$('#close_chatfull').click(function(){$(this).fadeOut("fast");});
+            setSkins(true); //Skins: false
+            $('#screenshot, #account_button, .controls, #klan, #level, #stats, .tosBox').remove();
+            $("#gamemode").replaceWith(
+                ' </div></div>');
+            $("#bilgilerModal").html('<div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header">Emoji<button type="button" class="close" data-dismiss="modal">&times;</button></div><div class="modal-body"><h3>'+
+                                     '<button></button>&nbsp;<button></button>&nbsp;<button></button>&nbsp;<button></button>&nbsp;<button></button>&nbsp;</h3></div></div></div>');
+
+            $("#chat_textbox").attr("maxlength","70");
+            $("#loginModal div.modal-content").replaceWith('<div class="modal-header">'+
+                                                           '<button type="button" id="close_chatfull" class="close" data-dismiss="modal">&times;</button><h1 style="text-align:center;color:#FF0000;" class="modal-title">Hmmm..<br> Chat is full!</h1></div>');
+        }
+        //=============================== tat =====================================
+        else if(e.keyCode == 88  && e.ctrlKey){
+			$('#close_chatfull').click(function(){$(this).fadeOut("fast");});
+            setSkins(false); //Skins: false
+            $('#screenshot, #account_button, .controls, #klan, #level, #stats, .tosBox').remove();
+            $("#gamemode").replaceWith(
+                ' </div></div>');
+            $("#bilgilerModal").html('<div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button></div><div class="modal-body"><h3>'+
+                                     '<button></button>&nbsp;<button></button>&nbsp;<button></button>&nbsp;<button></button>&nbsp;<button></button>&nbsp;</h3></div></div></div>');
+            $("#chat_textbox").attr("maxlength","70");
+            $("#loginModal div.modal-content").replaceWith('<div class="modal-header">'+
+                                                           '<button type="button" id="close_chatfull" class="close" data-dismiss="modal">&times;</button><h1 style="text-align:center;color:#FF0000;" class="modal-title">Hmmm..<br> Chat is full!</h1></div>');
+
+
+        }
+            //=============================== moAcid =====================================
+        else if(e.keyCode == 67  && e.ctrlKey){
+			$('#close_chatfull').click(function(){$(this).fadeOut("fast");});
+            (true);//Acid:true
+            $('#screenshot, #account_button, .controls, #klan, #level, #stats, .tosBox').remove();
+            $("#gamemode").replaceWith(
+                ' </div></div>');
+            $("#bilgilerModal").html('<div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header">Emoji<button type="button" class="close" data-dismiss="modal">&times;</button></div><div class="modal-body"><h3>'+
+                                     '<button></button>&nbsp;<button></button>&nbsp;<button></button>&nbsp;<button></button>&nbsp;<button></button>&nbsp;</h3></div></div></div>');
+
+            $("#chat_textbox").attr("maxlength","70");
+            $("#loginModal div.modal-content").replaceWith('<div class="modal-header">'+
+                                                           '<button type="button" id="close_chatfull" class="close" data-dismiss="modal">&times;</button><h1 style="text-align:center;color:#FF0000;" class="modal-title">Hmmm..<br> Chat is full!</h1></div>');
+        }
+                    //=============================== TatAcide =====================================
+else if(e.keyCode == 86  && e.ctrlKey){
+			$('#close_chatfull').click(function(){$(this).fadeOut("fast");});
+            (false);//Acid: false
+            $('#screenshot, #account_button, .controls, #klan, #level, #stats, .tosBox').remove();
+            $("#gamemode").replaceWith(
+                ' </div></div>');
+            $("#bilgilerModal").html('<div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header">Emoji<button type="button" class="close" data-dismiss="modal">&times;</button></div><div class="modal-body"><h3>'+
+                                     '<button></button>&nbsp;<button></button>&nbsp;<button></button>&nbsp;<button></button>&nbsp;<button></button>&nbsp;</h3></div></div></div>');
+
+            $("#chat_textbox").attr("maxlength","70");
+            $("#loginModal div.modal-content").replaceWith('<div class="modal-header">'+
+                                                           '<button type="button" id="close_chatfull" class="close" data-dismiss="modal">&times;</button><h1 style="text-align:center;color:#FF0000;" class="modal-title">Hmmm..<br> Chat is full!</h1></div>');
+        }
+                    //=============================== tat =====================================
+
+    })
+                })
+();
+
+var script = document.createElement('script');
+(document.body || document.head || document.documentElement).appendChild(script);
+        $("#instructions").hide();
+        $("#adbg").hide();
+        $("#footer").hide();
+        $("#instructions").hide();
+        $("#canvasx").hide();
+        $('.dialog-right').hide();
+        $('.btn-danger').hide();
+        $('.progress-bar-text').hide();
+        $('.agario-exp-bar').hide();
+        $('.progress-bar-star').hide();
+        $("#gamemode").remove();
+
+
+
+
+
+        $('.agario-profile-picture').replaceWith ('<img src="https://i.imgur.com/lVcAxJd.jpg" style=\" right: 100px; width: 200px; height: 210px;;\ ">')
+        $("#overlays").append('<img src="https://i.imgur.com/tgVXiVu.jpeg" style="width:100%; height:1080px; display:inline-block;">');
+        $('.btn-primary').text('Skin');
+        $(".btn-play").text('Play');
+
+
+window.addEventListener('keydown', keydown);
+window.addEventListener('keyup', keyup);
+var Feed = false;
+var Speed = 50;
+
+//Funtions
+function split() {
+    $("body").trigger($.Event("keydown", { keyCode: 32}));
+    $("body").trigger($.Event("keyup", { keyCode: 32}));
+}
+function mass() {
+    if (Feed) {
+        window.onkeydown({keyCode: 87});
+        window.onkeyup({keyCode: 87});
+        setTimeout(mass, Speed);
+    }
+}
+
+function keydown(event) {
+    switch(event.keyCode){
+    // Feed Macro
+    case 81:                                        // Q
+    {
+        Feed = true;
+        setTimeout(mass,Speed);
+    }// Center
+    case 83:                                       // S
+        X = window.innerWidth/2;
+        Y = window.innerHeight/2;
+        $("canvas").trigger($.Event("mousemove", {clientX: X,clientY: Y}));
+
+    break; // Triplesplit
+    case 68:         //  and Put in Your Key
+        split();
+        setTimeout(split, Speed);
+        setTimeout(split, Speed*2);
+    break; // Doublesplit
+    case 65:         // A and Put in Your Key
+        split();
+        setTimeout(split, Speed);
+    break;
+
+    }
+} // When Player Lets Go Of Q,It Stops Feeding
+function keyup(event) {
+    if (event.keyCode == 81) {
+        Feed = false;
+    }
+}
+
+//Mouse Clicks
+(function() {
+    $("#canvas").bind("mousedown",function(event) {
+        switch(event.which){
+        case 1:
+
+        break;
+        case 2:
+
+        break;
+        case 3:
+            Feed = true;
+            setTimeout(mass, Speed);
+        break;
+        }
+    });
+
+    $("#canvas").bind("mouseup",function(event) {
+        if (event.which == 3) {
+            Feed = false;
+        }
+    });
+    $('#canvas').bind('contextmenu',function(e) {
+        e.preventDefault();
+    });
+}());
+
+
+
+(function() {
+'use strict';
+
+var New_WhiteBackgroundColor = '#000';
+
+var old_fillRect = CanvasRenderingContext2D.prototype.fillRect;
+CanvasRenderingContext2D.prototype.fillRect = function() {
+    var x = arguments[0];
+    var y = arguments[1];
+    var w = arguments[2];
+    var h = arguments[3];
+
+    if (x==0 && y==0 && w==this.canvas.width && h==this.canvas.height) {
+        if (this.fillStyle == '#f2fbff') {
+            this.fillStyle = New_WhiteBackgroundColor;
+        }
+    }
+
+    return old_fillRect.apply(this, arguments);
+};
+
+function calculateRemain(text) {
+    if (text.endsWith('s')) {
+        var match;
+
+        match = / in:? (\d+)s$/.exec(text);
+        if (match !== null) {
+            return parseInt(match[1], 10);
+        }
+
+        match = /^((\d+)m)? ?(\d+)s$/.exec(text);
+        if (match !== null) {
+            return (parseInt(match[2], 10) || 0) * 60 + parseInt(match[3], 10); // "x || 0" is "0 if x undefined"
+        }
+    }
+
+    return null;
+}
+
+var old_fillText = CanvasRenderingContext2D.prototype.fillText;
+CanvasRenderingContext2D.prototype.fillText = function() {
+    if (arguments[0]=='Leaderboard')
+        arguments[0] = '   PRCTOWN'
+    return old_fillText.apply(this, arguments);
+};
+})();
+var z = "";
+var x = "";;
+var i = document.getElementById("helloDialog");
+var t ="";;;
+
+
+
+
+
+
+
+
+
+
+class mouseWheelZoom {
+  constructor() {
+    this.mOX = 0;
+    this.mOY = 0;
+    this.zoomValue = 0;
+    this.cellX = 0;
+    this.cellY = 0;
+
+
+  }
+  createBuffer(length) {
+    return new DataView(new ArrayBuffer(length));
+  }
+  sendBuffer(buf) {
+    if(this.ws && this.ws.readyState == 1) this.ws.send(buf);
+  }
+
+
+
+
+  sendMousePacket() {
+    let buffer = this.createBuffer(29);
+    buffer.setUint8(0, 4);
+    buffer.setFloat64(1, ((window.clientXXX - window.innerWidth / 2) / this.zoomValue) + this.cellX, true);
+    buffer.setFloat64(9, ((window.clientYYY - window.innerHeight / 2) / this.zoomValue) + this.cellY, true);
+    buffer.setFloat64(17, 0, true);
+    buffer.setUint32(25, true);
+    this.sendBuffer(buffer);
+  }
+
+}
+
+var observer = new MutationObserver(function(mutations){
+  mutations.forEach(function(mutation) {
+    mutation.addedNodes.forEach(function(node) {
+      if (/agario\.core\.js/i.test(node.src)){
+        observer.disconnect();
+        node.parentNode.removeChild(node);
+        var request = new XMLHttpRequest();
+        request.open("get", node.src, true);
+        request.send();
+        request.onload = function(){
+          var coretext = this.responseText;
+          var newscript = document.createElement("script");
+          newscript.type = "text/javascript";
+          newscript.async = true;
+          window._op = new mouseWheelZoom();
+          newscript.textContent = replaceCore(coretext);
+          document.body.appendChild(newscript);
+        };
+      }
+    });
+  });
+});
+observer.observe(document, {attributes:true, characterData:true, childList:true, subtree:true});
+
+const replaceCore = core => {
+  core = core.replace(/;if\((\w)<1\.0\){/i, `;if(0){`);
+  core = core.replace(/0;\w\[\w\+...>>3\]=(\w);\w\[\w\+...>>3\]=(\w);\w\[\w\+...>>3\]=(\w);\w\[\w\+...>>3\]=(\w);/i, `$& if(Math.abs($3-$1)>14e3 && Math.abs($4-$2)>14e3){window._op.mOX = ($1+$3)/2; window._op.mOY = ($2+$4)/2};`);
+
+
+  return core;
+}
+setskin('202310180607430784162001697602063')
