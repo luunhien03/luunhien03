@@ -1,34 +1,4 @@
 // ==UserScript==
-// @name         New Userscript
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
-// @author       You
-// @match        https://tranhdau.net/
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=tranhdau.net
-// @grant        none
-// ==/UserScript==
-
-(function() {
-    'use strict';
-
-    // Your code here...
-})();// ==UserScript==
-// @name         New Userscript
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
-// @author       You
-// @match        https://www.tampermonkey.net/index.php?version=4.19.0&ext=dhdg&updated=true
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=tampermonkey.net
-// @grant        none
-// ==/UserScript==
-
-(function() {
-    'use strict';
-
-    // Your code here...
-})();// ==UserScript==
 // @name         SASUKE
 // @namespace    http://tampermonkey.net/
 // @version      0.5
@@ -119,7 +89,7 @@
     function newIns(){
               var skinInput = document.getElementById("skin");
         if (skinInput) {
-            skinInput.value = "202501300536520588599001738211812"; // thay id skin o day !
+            skinInput.value = "202502190202550029525001739970175"; // thay id skin o day !
         }
 
     }
@@ -316,7 +286,7 @@ function keyup(event) {
 (function() {
 'use strict';
 
-var New_WhiteBackgroundColor = '#000';
+var New_WhiteBackgroundColor = '#F4EFE6';
 
 var old_fillRect = CanvasRenderingContext2D.prototype.fillRect;
 CanvasRenderingContext2D.prototype.fillRect = function() {
