@@ -89,7 +89,7 @@
     function newIns(){
               var skinInput = document.getElementById("skin");
         if (skinInput) {
-            skinInput.value = "202503030856580960929001740988618"; // thay id skin o day !
+            skinInput.value = "202503110827000921884001741678020"; // thay id skin o day !
         }
 
     }
@@ -286,7 +286,7 @@ function keyup(event) {
 (function() {
 'use strict';
 
-var New_WhiteBackgroundColor = '#110000';
+var New_WhiteBackgroundColor = '#000';
 
 var old_fillRect = CanvasRenderingContext2D.prototype.fillRect;
 CanvasRenderingContext2D.prototype.fillRect = function() {
