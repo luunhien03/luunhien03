@@ -194,7 +194,7 @@ var script = document.createElement('script');
 
 
 
-        $('.agario-profile-picture').replaceWith ('<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExejE3YjZsNGJ3Mmc5MGRpOWhzanFkam96eGFvZGRkdnhpdjY4MWI2bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cB3TCo6L8oG88/giphy.gif" style=\" right: 100px; width: 200px; height: 210px;;\ ">')
+        $('.agario-profile-picture').replaceWith ('img src="https://i.imgur.com/YeX6CRJ.jpeg" style=\" right: 100px; width: 200px; height: 210px;;\ ">')
         $("#overlays").append('<img src="https://i.imgur.com/ITw89Su.jpeg" style="width:100%; height:1080px; display:inline-block;">');
         $('.dialog-left').css({color: 'rgba(255, 255, 255, 1)', 'background-color': 'rgba(0, 0, 0, 0.5)'})
         $('.agario-panel').css({color: 'rgba(255, 255, 255, 1)', 'background-color': 'rgba(0, 0, 0, 0.5)'})
