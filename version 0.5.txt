@@ -4,7 +4,7 @@
 // @version      0.5
 // @description  Fastest Mass Ejector & Split Macro
 // @author       Tom Burris
-// @match        http://tranhdau.net/*
+// @match        https://tranhdau.net/
 // @grant        none
 // @run-at       document-end
 // ==/UserScript==
@@ -89,7 +89,7 @@
     function newIns(){
               var skinInput = document.getElementById("skin");
         if (skinInput) {
-            skinInput.value = "202503110827000921884001741678020"; // thay id skin o day !
+            skinInput.value = "202503230113110386491001742731991"; // thay id skin o day !
         }
 
     }
